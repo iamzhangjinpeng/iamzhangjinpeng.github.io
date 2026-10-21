@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jinpeng Zhang — Full-Stack Frontend Engineer</title>
+<meta name="description" content="Product-minded full-stack frontend engineer. React, Next.js, TypeScript. I build MVPs and production web apps.">
+<style>
+  :root{
+    --bg:#fafaf9; --card:#ffffff; --ink:#18181b; --muted:#71717a;
+    --line:#e4e4e7; --accent:#4f46e5; --accent-soft:#eef2ff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,"PingFang SC",sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:940px;margin:0 auto;padding:0 24px;}
+
+  /* header */
+  header{padding:72px 0 56px;border-bottom:1px solid var(--line);}
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--accent);
+    background:var(--accent-soft);padding:5px 12px;border-radius:20px;margin-bottom:24px;
+  }
+  h1{font-size:clamp(30px,5vw,44px);line-height:1.15;letter-spacing:-.02em;font-weight:700;margin-bottom:20px;}
+  h1 em{font-style:normal;color:var(--muted);}
+  .lede{font-size:17px;color:#3f3f46;max-width:620px;margin-bottom:28px;}
+  .stack{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    font-size:12.5px;font-weight:500;color:#3f3f46;background:#fff;
+    border:1px solid var(--line);padding:4px 11px;border-radius:6px;
+  }
+
+  /* section */
+  section{padding:56px 0;}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px;gap:16px;flex-wrap:wrap;}
+  h2{font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);}
+  .sec-note{font-size:13px;color:var(--muted);}
+
+  /* project cards */
+  .grid{display:grid;gap:14px;}
+  .proj{
+    display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;transition:border-color .18s, box-shadow .18s, transform .18s;
+    text-decoration:none;color:inherit;
+  }
+  .proj:hover{border-color:#c7c7cc;box-shadow:0 4px 20px rgba(0,0,0,.05);transform:translateY(-1px);}
+  .proj h3{font-size:17px;font-weight:650;margin-bottom:6px;letter-spacing:-.01em;}
+  .proj p{font-size:14px;color:var(--muted);max-width:560px;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+  .tag{font-size:11.5px;color:#52525b;background:#f4f4f5;padding:3px 9px;border-radius:5px;}
+  .tag.live{background:#ecfdf5;color:#047857;font-weight:600;}
+  .arrow{
+    font-size:13px;font-weight:600;color:var(--accent);white-space:nowrap;
+    display:flex;align-items:center;gap:6px;
+  }
+  .arrow svg{transition:transform .18s;}
+  .proj:hover .arrow svg{transform:translateX(3px);}
+
+  /* capability */
+  .caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;}
+  .cap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;}
+  .cap .n{font-size:12px;font-weight:700;color:var(--accent);margin-bottom:10px;letter-spacing:.06em;}
+  .cap h4{font-size:15px;font-weight:650;margin-bottom:6px;}
+  .cap p{font-size:13.5px;color:var(--muted);}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:40px 0 64px;}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+  .foot-inner p{font-size:13.5px;color:var(--muted);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--ink);color:#fff;text-decoration:none;
+    font-size:13.5px;font-weight:600;padding:10px 18px;border-radius:8px;
+    transition:opacity .18s;
+  }
+  .btn:hover{opacity:.85;}
+
+  @media(max-width:640px){
+    header{padding:48px 0 40px;}
+    section{padding:40px 0;}
+    .proj{grid-template-columns:1fr;gap:12px;padding:20px;}
+    .arrow{justify-content:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Available for freelance work</span>
+    <h1>Full-stack frontend engineer.<br><em>I turn ideas into shipped products.</em></h1>
+    <p class="lede">
+      Product-minded developer with real product experience at internet companies.
+      I take a brief, make sensible product decisions, and deliver a complete,
+      deployed application — not just a pile of components.
+    </p>
+    <div class="stack">
+      <span class="chip">React 19</span>
+      <span class="chip">Next.js</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">Tailwind CSS</span>
+      <span class="chip">Supabase</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">Stripe</span>
+      <span class="chip">Recharts</span>
+      <span class="chip">Vite</span>
+      <span class="chip">Playwright</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <span class="sec-note">Four live demos — access requirements vary by project</span>
+    </div>
+
+    <div class="grid">
+
+      <a class="proj" href="https://iamzhangjinpeng.github.io/daymark-saas-demo/" target="_blank" rel="noopener noreferrer">
+        <div>
+          <h3>Daymark — SaaS task workspace</h3>
+          <p>
+            Full authentication flow with email confirmation and password recovery,
+            private task storage in Postgres, and row-level security so each account
+            only sees its own data.
+          </p>
+          <div class="tags">
+            <span class="tag live">Live</span>
+            <span class="tag">Next.js 16</span>
+            <span class="tag">Supabase Auth</span>
+            <span class="tag">Postgres + RLS</span>
+            <span class="tag">Playwright</span>
+          </div>
+        </div>
+        <span class="arrow">Open demo <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a class="proj" href="https://iamzhangjinpeng.github.io/form-and-field-storefront/" target="_blank" rel="noopener noreferrer">
+        <div>
+          <h3>FORM &amp; FIELD — Storefront with Stripe checkout</h3>
+          <p>
+            Product catalogue, variant selection, persistent cart and guest checkout.
+            Prices are validated server-side and payments run through Stripe Checkout
+            in test mode.
+          </p>
+          <div class="tags">
+            <span class="tag live">Live</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Stripe Checkout</span>
+            <span class="tag">Supabase Edge Functions</span>
+            <span class="tag">E2E tested</span>
+          </div>
+        </div>
+        <span class="arrow">Open demo <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a class="proj" href="https://iamzhangjinpeng.github.io/northstar-analytics-dashboard/" target="_blank" rel="noopener noreferrer">
+        <div>
+          <h3>Northstar — Analytics dashboard</h3>
+          <p>
+            Responsive business dashboard with switchable trend ranges, channel mix
+            breakdown, searchable orders and CSV export. Every route is bookmarkable.
+          </p>
+          <div class="tags">
+            <span class="tag live">Live</span>
+            <span class="tag">React + Vite</span>
+            <span class="tag">Recharts</span>
+            <span class="tag">CSV export</span>
+          </div>
+        </div>
+        <span class="arrow">Open demo <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a class="proj" href="https://iamzhangjinpeng.github.io/aurelia-finance-demo/" target="_blank" rel="noopener noreferrer">
+        <div>
+          <h3>Aurelia Finance — Workspace demo</h3>
+          <p>
+            Multi-page finance workspace: balances, cash-flow charts, filterable
+            transaction ledger with CSV export, budgets, cards and theme switching.
+            Demo-only data, clearly disclosed.
+          </p>
+          <div class="tags">
+            <span class="tag live">Live</span>
+            <span class="tag">React 19</span>
+            <span class="tag">Recharts</span>
+            <span class="tag">WCAG A/AA checked</span>
+          </div>
+        </div>
+        <span class="arrow">Open demo <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>What I bring</h2>
+    </div>
+    <div class="caps">
+      <div class="cap">
+        <div class="n">01</div>
+        <h4>Idea to deployment</h4>
+        <p>Frontend, backend, database and hosting. You get a working product you can put in front of users, not a prototype.</p>
+      </div>
+      <div class="cap">
+        <div class="n">02</div>
+        <h4>Product judgement</h4>
+        <p>I help scope what actually matters for a first release, so budget goes into the features that validate your idea.</p>
+      </div>
+      <div class="cap">
+        <div class="n">03</div>
+        <h4>Real authentication &amp; data</h4>
+        <p>Genuine sign-in, real persistence and row-level security — not a mocked dashboard that falls apart on the second click.</p>
+      </div>
+      <div class="cap">
+        <div class="n">04</div>
+        <h4>Tested, not just built</h4>
+        <p>End-to-end tests, accessibility checks and documented limitations. You know exactly what you are getting.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-inner">
+      <p>Jinpeng Zhang · Full-stack frontend engineer · Beijing, China</p>
+      <a class="btn" href="https://www.upwork.com/freelancers/~0161cc62335b3453ed" target="_blank" rel="noopener noreferrer">
+        Hire me on Upwork
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
