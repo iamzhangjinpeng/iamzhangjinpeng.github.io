@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7f4" />
+    <meta name="description" content="Jinpeng Zhang is a full-stack product engineer available for freelance work. Explore SaaS, commerce, finance, and analytics demos." />
+    <title>Jinpeng Zhang — Full-Stack Product Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f6f7f4;
+        --ink: #16221f;
+        --muted: #67736e;
+        --line: #dfe5df;
+        --green: #d8f36a;
+        --deep: #203a33;
+        --white: #fff;
+        --mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        --sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; }
+      a:focus-visible { outline: 3px solid #567e25; outline-offset: 4px; border-radius: 4px; }
+      .wrap { width: min(1160px, calc(100% - 64px)); margin: 0 auto; }
+      .topbar { height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+      .wordmark { display: flex; align-items: center; gap: 11px; text-decoration: none; font-size: 14px; font-weight: 800; letter-spacing: -.04em; }
+      .mark { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; color: var(--green); background: var(--deep); font-family: var(--mono); font-size: 12px; }
+      .nav-right { display: flex; align-items: center; gap: 27px; font-size: 12px; font-weight: 700; }
+      .nav-link { text-decoration: none; color: #48554f; }
+      .nav-link:hover { color: var(--ink); }
+      .hire-link { padding: 11px 16px; border: 1px solid var(--ink); border-radius: 999px; text-decoration: none; transition: background .2s, color .2s; }
+      .hire-link:hover { color: var(--white); background: var(--ink); }
+      .hero { padding: 80px 0 62px; display: grid; grid-template-columns: 1fr 270px; align-items: end; gap: 48px; }
+      .eyebrow, .section-kicker, .project-type, .mini-label { font-family: var(--mono); text-transform: uppercase; letter-spacing: .12em; }
+      .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 10px; }
+      .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #89ac25; box-shadow: 0 0 0 4px #e7f1ca; }
+      h1 { max-width: 720px; margin: 21px 0 18px; font-size: clamp(46px, 7vw, 78px); line-height: .99; letter-spacing: -.075em; font-weight: 700; }
+      h1 .accent { color: #6a8529; }
+      .hero-copy { max-width: 590px; margin: 0; color: #58655f; font-size: 16px; line-height: 1.75; }
+      .hero-side { border-left: 1px solid var(--line); padding: 7px 0 6px 22px; }
+      .hero-side p { margin: 0 0 15px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+      .domains { display: flex; flex-wrap: wrap; gap: 7px; }
+      .domain { padding: 7px 10px; border: 1px solid #dce3d8; border-radius: 999px; background: #fbfcf9; color: #3e4c44; font-size: 10px; font-weight: 700; }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin: 9px 0 21px; }
+      .section-kicker { margin: 0 0 7px; color: #718078; font-size: 9px; }
+      h2 { margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -.055em; }
+      .section-note { margin: 0 1px 2px; color: #77817b; font-size: 11px; }
+      .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .project { min-width: 0; overflow: hidden; border: 1px solid #dfe4dc; border-radius: 13px; background: #fff; transition: transform .2s ease, box-shadow .2s ease; }
+      .project:hover { transform: translateY(-3px); box-shadow: 0 13px 30px #203a3310; }
+      .preview { height: 226px; position: relative; overflow: hidden; padding: 23px; display: flex; align-items: center; justify-content: center; }
+      .preview.daymark { background: #e7edf7; }
+      .preview.formfield { background: #f1e8d9; }
+      .preview.aurelia { background: #d9e9e5; }
+      .preview.northstar { background: #e8eafa; }
+      .preview::before, .preview::after { content: ""; position: absolute; border: 1px solid #ffffff8c; border-radius: 50%; }
+      .preview::before { width: 230px; height: 230px; top: -150px; right: -26px; }
+      .preview::after { width: 290px; height: 290px; bottom: -228px; left: -65px; }
+      .window { position: relative; z-index: 1; width: min(100%, 435px); min-height: 168px; padding: 11px; border: 1px solid #17231f18; border-radius: 10px; background: #ffffffed; box-shadow: 0 13px 35px #16221f1a; transform: rotate(-1.5deg); }
+      .window-bar { display: flex; align-items: center; gap: 4px; height: 13px; margin-bottom: 9px; }
+      .window-bar i { width: 5px; height: 5px; display: block; border-radius: 50%; background: #d4d9d6; }
+      .window-bar span { margin-left: 7px; color: #8b9590; font: 6px var(--mono); }
+      .mini-layout { display: grid; grid-template-columns: 72px 1fr; min-height: 132px; gap: 9px; }
+      .mini-side { padding: 8px 6px; border-radius: 5px; background: #f5f7f6; }
+      .mini-brand { width: 34px; height: 5px; margin: 1px 0 12px; border-radius: 5px; background: #344a42; }
+      .mini-nav { height: 4px; margin: 8px 0; border-radius: 4px; background: #e0e6e2; }
+      .mini-nav.active { background: #b5cf72; }
+      .mini-main { min-width: 0; }
+      .mini-title { width: 81px; height: 7px; margin: 2px 0 8px; border-radius: 4px; background: #34433d; }
+      .mini-sub { width: 112px; height: 4px; margin-bottom: 12px; border-radius: 4px; background: #e1e6e3; }
+      .mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+      .mini-stat { padding: 6px; border: 1px solid #e7ebe8; border-radius: 4px; }
+      .mini-stat b { display: block; height: 5px; width: 27px; border-radius: 4px; background: #3b5148; }
+      .mini-stat i { display: block; height: 3px; width: 38px; margin-top: 5px; border-radius: 4px; background: #e3e8e5; }
+      .mini-chart { height: 43px; margin-top: 7px; padding: 6px 5px; border: 1px solid #e7ebe8; border-radius: 4px; position: relative; overflow: hidden; }
+      .chart-line { position: absolute; inset: 8px 0 0 0; width: 100%; height: 36px; }
+      .list-row { height: 7px; display: flex; align-items: center; gap: 5px; margin-top: 6px; }
+      .list-row i { width: 10px; height: 10px; border-radius: 3px; background: #d9e5c0; }
+      .list-row span { width: 60px; height: 4px; border-radius: 4px; background: #e4e8e4; }
+      .list-row b { width: 25px; height: 4px; margin-left: auto; border-radius: 4px; background: #c9d4cf; }
+      .store-window { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .9fr; width: min(100%, 400px); height: 168px; overflow: hidden; border-radius: 8px; background: #fbf8f1; box-shadow: 0 13px 35px #604a2b20; transform: rotate(1deg); }
+      .store-copy { padding: 18px 10px 12px 18px; }
+      .store-word { color: #354238; font: 700 7px var(--mono); letter-spacing: .05em; }
+      .store-overline { margin-top: 20px; color: #948a78; font: 6px var(--mono); letter-spacing: .13em; }
+      .store-title { max-width: 140px; margin-top: 6px; color: #36433a; font: 500 18px/1.05 Georgia, serif; letter-spacing: -.04em; }
+      .store-cta { width: 61px; margin-top: 12px; padding: 6px 7px; border-radius: 2px; color: white; background: #445343; font: 6px var(--mono); text-align: center; }
+      .store-art { position: relative; margin: 16px 15px 14px 0; background: #e3d9c9; overflow: hidden; }
+      .vase { position: absolute; bottom: 22px; left: 32%; width: 33px; height: 68px; border-radius: 15px 15px 11px 11px / 17px 17px 8px 8px; background: linear-gradient(90deg,#b9a58a,#d0bea4 45%,#aa987f); }
+      .vase::before { content: ""; position: absolute; top: -16px; left: 13px; width: 7px; height: 21px; border-radius: 3px 3px 0 0; background: #bca98d; }
+      .branch { position: absolute; width: 1px; height: 52px; left: 51%; top: 20px; background: #839073; transform: rotate(18deg); }
+      .branch::before, .branch::after { content: ""; position: absolute; width: 16px; height: 7px; border-radius: 100% 0; background: #87977b; }
+      .branch::before { top: 10px; left: -13px; transform: rotate(-33deg); }
+      .branch::after { top: 24px; left: 0; transform: rotate(35deg); }
+      .finance-window { position: relative; z-index: 1; width: min(100%, 380px); padding: 13px; border: 1px solid #14352c20; border-radius: 11px; background: #f8fbf9; box-shadow: 0 13px 35px #173d3320; transform: rotate(-1deg); }
+      .finance-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; color: #3c5750; font: 6px var(--mono); }
+      .finance-balance { padding: 11px 13px; border-radius: 7px; color: #f5fbf8; background: #244a40; }
+      .finance-balance span { display: block; color: #c2d4ce; font: 6px var(--mono); }
+      .finance-balance b { display: block; margin-top: 5px; font-size: 17px; letter-spacing: -.05em; }
+      .finance-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 7px; }
+      .finance-tile { padding: 8px; border: 1px solid #e2eae6; border-radius: 6px; color: #63766f; font: 6px var(--mono); }
+      .finance-tile b { display: block; margin: 4px 0 0; color: #29473d; font: 700 11px var(--sans); }
+      .donut { float: right; width: 25px; height: 25px; border-radius: 50%; background: conic-gradient(#8cab69 0 34%, #dae4d9 34% 67%, #d6b47e 67% 86%, #e8e9de 86%); position: relative; }
+      .donut::after { content: ""; position: absolute; inset: 6px; border-radius: 50%; background: #fff; }
+      .project.north .window { transform: rotate(1deg); }
+      .project.north .mini-side { background: #f3f4fb; }
+      .project.north .mini-brand { background: #5f68a5; }
+      .project.north .mini-nav.active { background: #c9cdf0; }
+      .project.north .mini-stat b { background: #515d9a; }
+      .project.north .mini-chart { background: #fafaff; }
+      .project.north .chart-line polyline { stroke: #737fc0; }
+      .preview-caption { position: absolute; z-index: 2; left: 15px; bottom: 13px; color: #65736c; font: 8px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+      .project-body { padding: 20px 21px 18px; }
+      .project-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+      .project-type { color: #77837c; font-size: 8px; }
+      .project-index { color: #a0aaa4; font: 9px var(--mono); }
+      .project h3 { margin: 0; font-size: 20px; letter-spacing: -.055em; }
+      .project-desc { min-height: 38px; max-width: 460px; margin: 7px 0 16px; color: #637069; font-size: 11px; line-height: 1.7; }
+      .project-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 13px; border-top: 1px solid #edf0ed; }
+      .stack { display: flex; flex-wrap: wrap; gap: 5px; }
+      .stack span { color: #79857e; font: 8px var(--mono); }
+      .stack span + span::before { content: "·"; padding-right: 5px; color: #b2bbb4; }
+      .project-links { display: flex; align-items: center; gap: 12px; flex-shrink: 0; font-size: 10px; font-weight: 800; }
+      .demo-link, .repo-link { text-decoration: none; }
+      .demo-link { display: inline-flex; align-items: center; gap: 5px; }
+      .demo-link:hover, .repo-link:hover { color: #668022; }
+      .repo-link { color: #78847d; }
+      .arrow { font-size: 13px; line-height: 0; }
+      .capabilities { display: grid; grid-template-columns: .9fr 2.1fr; gap: 48px; margin: 74px 0 64px; padding: 26px 0 0; border-top: 1px solid var(--line); }
+      .cap-title { font-size: 17px; line-height: 1.3; letter-spacing: -.045em; }
+      .cap-title span { color: #76827b; }
+      .cap-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .cap-item { padding-left: 13px; border-left: 2px solid #bed66d; }
+      .cap-item b { display: block; margin-bottom: 6px; font-size: 11px; }
+      .cap-item p { margin: 0; color: #737e77; font-size: 10px; line-height: 1.65; }
+      footer { padding: 21px 0 26px; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; color: #758078; font-size: 10px; }
+      .footer-mark { color: #34423a; font-weight: 800; }
+      .footer-links { display: flex; gap: 17px; }
+      .footer-links a { text-decoration: none; }
+      .footer-links a:hover { color: var(--ink); }
+      @media (max-width: 760px) {
+        .wrap { width: min(100% - 38px, 560px); }
+        .topbar { height: 66px; }
+        .nav-right { gap: 13px; }
+        .nav-link { display: none; }
+        .hire-link { padding: 9px 13px; }
+        .hero { grid-template-columns: 1fr; gap: 27px; padding: 58px 0 42px; }
+        h1 { max-width: 580px; }
+        .hero-side { border-left: 0; border-top: 1px solid var(--line); padding: 16px 0 0; }
+        .hero-side p { margin-bottom: 11px; }
+        .project-grid { gap: 13px; }
+        .preview { height: 190px; padding: 16px; }
+        .window { padding: 9px; }
+        .mini-layout { grid-template-columns: 58px 1fr; }
+        .store-window { height: 152px; }
+        .project-body { padding: 16px; }
+        .project-desc { min-height: 54px; }
+        .project-bottom { align-items: flex-start; flex-direction: column; }
+        .capabilities { grid-template-columns: 1fr; gap: 22px; margin: 54px 0 45px; }
+      }
+      @media (max-width: 520px) {
+        .wrap { width: calc(100% - 32px); }
+        .wordmark { font-size: 12px; }
+        .mark { width: 26px; height: 26px; }
+        .hero { padding-top: 48px; }
+        h1 { font-size: clamp(43px, 13vw, 63px); }
+        .hero-copy { font-size: 14px; }
+        .section-head { align-items: flex-start; flex-direction: column; gap: 7px; }
+        .project-grid { grid-template-columns: 1fr; }
+        .preview { height: 210px; }
+        .project-body { padding: 18px; }
+        .project-desc { min-height: 0; }
+        .project-bottom { flex-direction: row; align-items: center; }
+        .cap-list { grid-template-columns: 1fr; gap: 15px; }
+        footer { align-items: flex-start; flex-direction: column; gap: 13px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="wrap topbar">
+      <a class="wordmark" href="#top" aria-label="Jinpeng Zhang, home"><span class="mark">JZ</span><span>JINPENG ZHANG</span></a>
+      <nav class="nav-right" aria-label="Main navigation">
+        <a class="nav-link" href="#work">Selected work</a>
+        <a class="nav-link" href="#capabilities">Capabilities</a>
+        <a class="hire-link" href="https://github.com/iamzhangjinpeng" target="_blank" rel="noreferrer">Hire me <span class="arrow">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="top" class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="eyebrow">Full-stack product engineer <span>·</span> Available for freelance work</div>
+          <h1 id="hero-title">I turn ideas into<br /><span class="accent">shipped products.</span></h1>
+          <p class="hero-copy">Product-minded developer with experience at internet companies. I take a brief from product decisions and polished interfaces through authentication, data, and deployment.</p>
+        </div>
+        <aside class="hero-side">
+          <p>Four focused demos across the work I do. Access varies by project; sample data is clearly labeled.</p>
+          <div class="domains" aria-label="Areas of work">
+            <span class="domain">SaaS</span><span class="domain">Commerce</span><span class="domain">Finance</span><span class="domain">Analytics</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="work" aria-labelledby="work-title">
+        <div class="section-head">
+          <div><p class="section-kicker">A few things in motion</p><h2 id="work-title">Selected work</h2></div>
+          <p class="section-note">Open a live demo or explore the source.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project">
+            <div class="preview daymark" aria-hidden="true">
+              <div class="window">
+                <div class="window-bar"><i></i><i></i><i></i><span>daymark / my tasks</span></div>
+                <div class="mini-layout"><div class="mini-side"><div class="mini-brand"></div><div class="mini-nav active"></div><div class="mini-nav"></div><div class="mini-nav"></div><div class="mini-nav"></div></div><div class="mini-main"><div class="mini-title"></div><div class="mini-sub"></div><div class="mini-stats"><div class="mini-stat"><b></b><i></i></div><div class="mini-stat"><b></b><i></i></div><div class="mini-stat"><b></b><i></i></div></div><div class="list-row"><i></i><span></span><b></b></div><div class="list-row"><i></i><span></span><b></b></div><div class="list-row"><i></i><span></span><b></b></div></div></div>
+              </div>
+              <span class="preview-caption">A calmer place to get things done</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-type">SaaS · Task management</span><span class="project-index">01 / 04</span></div>
+              <h3>Daymark</h3>
+              <p class="project-desc">Email sign-up, password recovery, and private task data stored in Postgres with row-level security. Create an account to try the workspace.</p>
+              <div class="project-bottom"><div class="stack"><span>Next.js</span><span>Supabase Auth</span><span>Postgres RLS</span></div><div class="project-links"><a class="demo-link" href="https://iamzhangjinpeng.github.io/daymark-saas-demo/" target="_blank" rel="noopener noreferrer">Live demo <span class="arrow">↗</span></a><a class="repo-link" href="https://github.com/iamzhangjinpeng/daymark-saas-demo" target="_blank" rel="noopener noreferrer">Source</a></div></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="preview formfield" aria-hidden="true">
+              <div class="store-window"><div class="store-copy"><div class="store-word">FORM &amp; FIELD</div><div class="store-overline">OBJECTS FOR LIVING</div><div class="store-title">A softer kind<br />of everyday.</div><div class="store-cta">EXPLORE THE EDIT</div></div><div class="store-art"><div class="branch"></div><div class="vase"></div></div></div>
+              <span class="preview-caption">A considered collection, end to end</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-type">Commerce · Storefront</span><span class="project-index">02 / 04</span></div>
+              <h3>FORM &amp; FIELD</h3>
+              <p class="project-desc">Browse products, choose variants, keep a cart across refreshes, and complete guest checkout. Checkout is in test or clearly labeled demo mode; no real payment is taken.</p>
+              <div class="project-bottom"><div class="stack"><span>Next.js</span><span>Stripe Checkout</span><span>Supabase</span></div><div class="project-links"><a class="demo-link" href="https://iamzhangjinpeng.github.io/form-and-field-storefront/" target="_blank" rel="noopener noreferrer">Live demo <span class="arrow">↗</span></a><a class="repo-link" href="https://github.com/iamzhangjinpeng/form-and-field-storefront" target="_blank" rel="noopener noreferrer">Source</a></div></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="preview aurelia" aria-hidden="true">
+              <div class="finance-window"><div class="finance-head"><span>AURELIA / OVERVIEW</span><span>•••</span></div><div class="finance-balance"><span>TOTAL BALANCE</span><b>$24,680.50</b></div><div class="finance-bottom"><div class="finance-tile">INCOME<b>$5,420</b></div><div class="finance-tile">SPENDING <span class="donut"></span><b>$2,860</b></div></div></div>
+              <span class="preview-caption">A clearer view of your finances</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-type">Finance · Dashboard</span><span class="project-index">03 / 04</span></div>
+              <h3>Aurelia Finance</h3>
+              <p class="project-desc">Explore balances, cash flow, searchable transactions, budgets, and virtual cards with fictional data. Demo login details are in the project README.</p>
+              <div class="project-bottom"><div class="stack"><span>React 19</span><span>TypeScript</span><span>Recharts</span></div><div class="project-links"><a class="demo-link" href="https://iamzhangjinpeng.github.io/aurelia-finance-demo/" target="_blank" rel="noopener noreferrer">Live demo <span class="arrow">↗</span></a><a class="repo-link" href="https://github.com/iamzhangjinpeng/aurelia-finance-demo#explore-the-demo" target="_blank" rel="noopener noreferrer">Demo login</a><a class="repo-link" href="https://github.com/iamzhangjinpeng/aurelia-finance-demo" target="_blank" rel="noopener noreferrer">Source</a></div></div>
+            </div>
+          </article>
+
+          <article class="project north">
+            <div class="preview northstar" aria-hidden="true">
+              <div class="window">
+                <div class="window-bar"><i></i><i></i><i></i><span>northstar / overview</span></div>
+                <div class="mini-layout"><div class="mini-side"><div class="mini-brand"></div><div class="mini-nav active"></div><div class="mini-nav"></div><div class="mini-nav"></div><div class="mini-nav"></div></div><div class="mini-main"><div class="mini-title"></div><div class="mini-sub"></div><div class="mini-stats"><div class="mini-stat"><b></b><i></i></div><div class="mini-stat"><b></b><i></i></div><div class="mini-stat"><b></b><i></i></div></div><div class="mini-chart"><svg class="chart-line" viewBox="0 0 300 50" preserveAspectRatio="none"><polyline points="0,37 30,31 55,34 81,22 110,27 138,15 169,21 197,12 226,20 252,7 275,11 300,3" fill="none" stroke-width="2.5" /></svg></div></div></div>
+              </div>
+              <span class="preview-caption">Signals behind the daily numbers</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-type">Analytics · Business dashboard</span><span class="project-index">04 / 04</span></div>
+              <h3>Northstar Analytics</h3>
+              <p class="project-desc">A responsive analytics workspace for revenue, visitor trends, sales channels, and searchable sample orders with CSV export.</p>
+              <div class="project-bottom"><div class="stack"><span>React</span><span>TypeScript</span><span>Recharts</span></div><div class="project-links"><a class="demo-link" href="https://iamzhangjinpeng.github.io/northstar-analytics-dashboard/" target="_blank" rel="noopener noreferrer">Live demo <span class="arrow">↗</span></a><a class="repo-link" href="https://github.com/iamzhangjinpeng/northstar-analytics-dashboard" target="_blank" rel="noopener noreferrer">Source</a></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="capabilities" class="capabilities" aria-labelledby="cap-title">
+        <div class="cap-title" id="cap-title">From the first brief to a working release.<br /><span>What I bring to the build.</span></div>
+        <div class="cap-list">
+          <div class="cap-item"><b>Product judgment</b><p>Shape a focused first release around the work that matters.</p></div>
+          <div class="cap-item"><b>End-to-end delivery</b><p>Interfaces, authentication, data, and deployment in one product.</p></div>
+          <div class="cap-item"><b>Tested workflows</b><p>Private task data, checkout, finance tools, analytics, and clear demo boundaries.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <span>© <span id="year">2026</span> <span class="footer-mark">Jinpeng Zhang</span> · Full-stack product engineer · Beijing, China</span>
+      <div class="footer-links"><a href="https://github.com/iamzhangjinpeng" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow">↗</span></a><a href="#top">Back to top ↑</a></div>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>
